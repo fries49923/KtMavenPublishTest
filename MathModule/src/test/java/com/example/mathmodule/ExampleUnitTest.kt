@@ -15,4 +15,11 @@ class ExampleUnitTest {
         val helper = MathHelper()
         assertEquals(5, helper.add(2, 3))
     }
+
+    @Test
+    fun mathHelper_square_isCorrect() {
+        val helper = MathHelper()
+        assertEquals(9, helper.square(3))
+        assertEquals(16, helper.square(4))
+    }
 }

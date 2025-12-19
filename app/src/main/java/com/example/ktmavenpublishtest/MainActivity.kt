@@ -93,7 +93,7 @@ fun MainPage() {
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun MainPagePreview() {
     KtMavenPublishTestTheme {
         MainPage()
     }

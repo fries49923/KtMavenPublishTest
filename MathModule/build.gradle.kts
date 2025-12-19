@@ -52,7 +52,7 @@ dependencies {
 // 從專案根目錄讀取 secrets.properties 檔案
 // 該檔案用於存放敏感資訊（例如 GitHub Packages 的帳號與 Token
 val secretsProperties = Properties().apply {
-    val file = rootProject.file("secrets.properties")
+    val file = File(rootDir, "secrets.properties")
     if (file.exists()) {
         load(file.inputStream())
     }
@@ -72,7 +72,7 @@ afterEvaluate {
 
                 // artifactId: 單一 Library 的名稱，建議用短橫線分隔
                 artifactId = "utils-math"
-                version = "0.0.1"
+                version = "0.0.2"
 
                 // 指定要發佈的組件來源，這裡使用 release build 的 component
                 from(components["release"])
